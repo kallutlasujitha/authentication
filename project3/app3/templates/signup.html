@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: auto;
+        padding: auto;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px;
+    }
+
+    form {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button{
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px ;
+        cursor: pointer;
+
+    }
+    button:hover{
+        background-color: #4caf49;
+    }
+
+
+</style>
+</head>
+
+<body>
+  <!-- <h1>Signup</h1> -->
+  <form action="" method="post">
+    {% csrf_token %} 
+    <h3>Signup Here</h3>
+    <!-- <input type="hidden" id="id" name="id" > -->
+    
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="Username" name="username" id="username" required>
+
+    <label for="email">Email</label>
+    <input type="email" placeholder="Email" name="email" id="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" name="password" required>
+
+
+    <!-- <label for="password2">Confrom Password</label>
+    <input type="password" placeholder="Confrom Password" id="password2" name="password2" required> -->
+    <button type="submit">Signup</button>
+
+
+
+    
+</form>
+
+<!-- 
+<h1>Login</h1>
+<form method="post" action="{% url 'login' %}">
+  <h3>Login Here</h3>
+  {% csrf_token %} 
+
+
+  <label for="username">Username</label>
+  <input type="text" placeholder="Enter Username" id="username" name="username" required>
+
+  <label for="password">Password</label>
+  <input type="password" placeholder="Password" id="password" name="pass" required>
+
+  <button type="submit">Log In</button>
+
+  
+
+</form> -->
+</body>
